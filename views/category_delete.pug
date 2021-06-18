@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    | Navigation: 
+    a(href='/') Categories
+    |  > 
+    a(href=category.url) #{category.name}
+    |  > 
+    | #{title}
+    #displaybar
+        if items.length
+            | Can't delete category, delete its items first.
+        else
+            | This operation is irreversible. Do you want to continue?
+            form(method='POST' action='')
+                div.form-group
+                    input#id.form-control(type='hidden' name='id', required='true', value=category._id)
+                button.btn.btn-danger(type='submit') DELETE CATEGORY

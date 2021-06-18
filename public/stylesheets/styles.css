@@ -1,0 +1,199 @@
+:root{
+	--footerFontColor: #fff;
+
+	--externalBgColor: #2a2a2a;
+	--mainBgColor: #444;
+	--barBgColor: #777;
+	--darkbarBgColor: #666;
+	--externalBorderColor: var(--barBgColor);
+	--internalBorderColor: var(--externalBgColor);
+	--fontColor:white;
+	--linkColor:#bcf;
+	--hoverColor: #8af;
+
+	--addbarInternalBorderColor: #232;
+	--addbarBgColor: #778977;
+	--addbarLinkColor:#5f5;
+	--addbarHoverColor: #0f0;
+
+	--deletebarInternalBorderColor: #322;
+	--deletebarBgColor: #897777;
+	--deletebarLinkColor:#f55;
+	--deletebarHoverColor: #f00;
+
+	--updatebarInternalBorderColor: #223;
+	--updatebarBgColor: #777789;
+	--updatebarLinkColor:#55f;
+	--updatebarHoverColor: #00f;
+	
+	/*--externalBgColor: #88a;
+	--mainBgColor: #aac;
+	--articleBgColor: #ddddff;
+	--footerBgColor: #eeeeff;
+	--externalBorderColor: #123456;
+	--internalBorderColor: #123456;
+	--fontColor:black;
+	--hoverColor: #112233;
+	*/
+}
+
+button{
+	font-size:50px;
+}
+
+#storetitle{
+	margin: 15px;
+	font-size: 60px;
+	text-align: center;
+}
+
+
+#footer{
+	font-weight: bold;
+	margin: 15px;
+	color: var(--footerFontColor);
+	font-size: 20px;
+	background-color: var(--barBgColor);
+	border: 1px solid var(--internalBorderColor);
+	padding: 20px;
+}
+
+*{
+	color: var(--fontColor);
+	padding:0;
+	margin:0;
+}
+
+article img{
+	float:left;
+	padding: 10px;
+}
+
+body{
+	background-color: var(--externalBgColor);
+}
+
+#displaybar{
+	padding: 10px;
+	margin: 20px 0px;
+	font-size: 30px;
+	box-sizing: border-box;
+	border: 1px solid var(--internalBorderColor);
+	background-color:var(--barBgColor);
+}
+
+/* #addbar{
+	padding: 5px;
+	margin: 20px 15px;
+	font-size: 20px;
+	box-sizing: border-box;
+	border: 1px solid var(--internalBorderColor);
+	background-color:var(--darkbarBgColor);
+	font-style: italic;
+} */
+#addbar{
+	padding: 0 10px;
+	margin: 20px 0px;
+	font-size: 30px;
+	box-sizing: border-box;
+	border: 1px solid var(--addbarInternalBorderColor);
+	background-color:var(--addbarBgColor);
+}
+#deletebar{
+	padding: 0 10px;
+	margin: 20px 0px;
+	font-size: 30px;
+	box-sizing: border-box;
+	border: 1px solid var(--deletebarInternalBorderColor);
+	background-color:var(--deletebarBgColor);
+}
+
+#updatebar{
+	padding: 0 10px;
+	margin: 20px 0px;
+	font-size: 30px;
+	box-sizing: border-box;
+	border: 1px solid var(--updatebarInternalBorderColor);
+	background-color:var(--updatebarBgColor);
+}
+
+a:hover{
+	color: var(--hoverColor);
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+	color:var(--linkColor);
+}
+
+#addbar a{
+	color:var(--addbarLinkColor);
+}
+#addbar a:hover{
+	color:var(--addbarHoverColor);
+}
+
+#deletebar a{
+	color:var(--deletebarLinkColor);
+}
+#deletebar a:hover{
+	color:var(--deletebarHoverColor);
+}
+
+#updatebar a{
+	color:var(--updatebarLinkColor);
+}
+#updatebar a:hover{
+	color:var(--updatebarHoverColor);
+}
+
+/*
+header{
+}
+
+footer{
+}
+
+div#all>div{
+}
+*/
+.contents{
+	background-color: var(--mainBgColor);
+	border: 5px solid var(--externalBorderColor);
+	box-sizing: border-box;
+}
+
+#all{
+	width: min(90vw,1200px);
+	float: center;
+	margin: 0px auto;
+	padding-top: 20px;
+}
+
+#mainpanel{
+	/* height: calc(100vh - 40px);*/
+	margin: 30px 0;
+	padding: 20px 20px 0px 20px;
+}
+
+.form-group{
+	color: black;
+}
+
+form{
+	padding-bottom: 20px;
+}
+
+h1 button{
+	margin: 0 0 0 10px;
+}
+
+button a{
+	text-decoration: none;
+	color: var(--fontColor);
+}
+
+button a:hover{
+	color: var(--fontColor);
+}

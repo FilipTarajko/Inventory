@@ -1,0 +1,24 @@
+extends layout
+
+block buttons
+    button.btn.btn-primary
+        a(href=item.url+'/update') update item
+    button.btn.btn-danger
+        a(href=item.url+'/delete') delete item
+
+block navigation
+    | Navigation: 
+    a(href='/') Categories
+    |  > 
+    a(href=item.category.url) #{item.category.name}
+    |  > 
+    | #{title}
+
+block content
+    #displaybar
+        | #{item.description}
+        br
+        br
+        | Price: #{item.price}
+        br
+        | In stock: #{item.stock}

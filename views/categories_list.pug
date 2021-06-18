@@ -1,0 +1,15 @@
+extends layout
+
+block buttons
+    button.btn.btn-success
+      a(href='/create') add new category
+
+block navigation
+    | Navigation: 
+    | Categories
+
+
+block content
+    each category in categories_list
+        #displaybar
+            a(href=category.url) #{category.name}

@@ -1,0 +1,24 @@
+extends layout
+
+block buttons
+    button.btn.btn-success
+      a(href=category.url+'/create') add item
+    button.btn.btn-danger
+        a(href=category.url+'/delete') delete category
+    button.btn.btn-primary
+        a(href=category.url+'/update') update category
+
+block navigation
+    | Navigation: 
+    a(href='/') Categories
+    |  > 
+    | #{title}
+
+block description
+    br
+    | #{category.description}
+
+block content
+    each item in items_list
+        #displaybar
+            a(href=item.url) #{item.name}

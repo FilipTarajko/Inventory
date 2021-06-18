@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    | Navigation: 
+    a(href='/') Categories
+    if category!==undefined
+        |  > 
+        a(href=category.url) #{category.name}
+    |  > 
+    | #{title}
+    form(method='POST' action='')
+        div.form-group
+        label(for='name') Name:
+            input#name.form-control(type='text' name='name' required='true' value=(undefined===category ? '' : category.name))
+        div.form-group
+        label(for='description') Description:
+            input#description.form-control(type='text' name='description' required='true' value=(undefined===category ? '' : category.description))
+        br
+        br
+        if category!==undefined
+            button.btn.btn-primary(type='submit') Update category
+        else
+            button.btn.btn-success(type='submit') Create category
+    if errors
+        ul
+            for error in errors
+                li!= error.msg
